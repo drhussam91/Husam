@@ -312,6 +312,7 @@ main#home h1 {
 
 .projects img {
   width: 100%;
+  border: 3px #fff solid;
 }
 
 .projects img:hover {
@@ -351,6 +352,20 @@ main#home h1 {
   background: #2b2b2b;
   color: #fff;
   height: 60px;
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -394,11 +409,19 @@ main#home h1 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh;
+  }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */
