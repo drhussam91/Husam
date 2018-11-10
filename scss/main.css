@@ -40,7 +40,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
+  opacity: 1;
   visibility: hidden;
 }
 
@@ -276,6 +276,11 @@ main#home h1 {
   -ms-grid-column-span: 2;
   grid-area: bio;
   font-size: 1.5rem;
+  padding-top: 3rem;
+}
+
+.bio h3 {
+  font-size: 2rem;
 }
 
 .job-1 {
@@ -300,6 +305,10 @@ main#home h1 {
   background: #515151;
   padding: 0.5rem;
   border-bottom: #ecc905 5px solid;
+}
+
+.job h3 {
+  font-size: 1.5rem;
 }
 
 .projects {
@@ -346,9 +355,45 @@ main#home h1 {
   color: #333;
 }
 
+.boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.boxes div {
+  font-size: 2rem;
+  border: 3px #fff solid;
+  border-radius: 10px;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #ecc905;
+  color: #000;
+}
+
+.boxes div:hover span {
+  color: #000;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
+  font-size: 1.5rem;
   background: #2b2b2b;
   color: #fff;
   height: 60px;
@@ -359,12 +404,24 @@ main#home h1 {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
   }
+  #contact {
+    padding-top: 20vh;
+  }
+  .bio {
+    max-width: 500px;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  #contact {
+    padding-top: 20vh;
+  }
+  .bio {
+    max-width: 500px;
   }
 }
 
